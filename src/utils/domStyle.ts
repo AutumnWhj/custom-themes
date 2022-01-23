@@ -125,7 +125,7 @@ export const replaceLinkEleColor = colorMap => {
   })
 }
 export const changeAllDomColor = (dom, replaceColorObj) => {
-  const { children } = dom
+  const { children=[] } = dom
 
   const style = getStyle(dom)
 
@@ -146,6 +146,6 @@ export const changeAllDomColor = (dom, replaceColorObj) => {
 
   const { length } = children || []
   if (length) {
-    children.forEach(item => changeAllDomColor(item, replaceColorObj))
+    (Array.from(children) || []).forEach(item => changeAllDomColor(item, replaceColorObj))
   }
 }
