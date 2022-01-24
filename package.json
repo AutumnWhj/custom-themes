@@ -1,6 +1,6 @@
 {
   "name": "custom-themes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/bundle.cjs.js",
   "scripts": {
     "build": "rimraf lib/* && rollup -c",
