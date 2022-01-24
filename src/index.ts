@@ -4,7 +4,6 @@ import { replaceStyleEleColor, replaceLinkEleColor, changeAllDomColor } from './
 let replaceColorMap
 const observeTheme = (themeColor:string, baseColor:string) => {
   const observer = new MutationObserver(mutationsList => {
-    console.log('mutationsList: ', mutationsList);
     if (!replaceColorMap) {
       replaceColorMap = getReplacePrimaryColorMap(baseColor, themeColor)
     }
